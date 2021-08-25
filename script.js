@@ -35,10 +35,10 @@ function convertLetter(letter) {
 }
 
 function rot13(str) {
-  return str;
+  return str
+    .split("")
+    .map((char) => convertLetter(char))
+    .join("");
 }
 
-console.log(convertLetter("N"));
-console.log(convertLetter("B"));
-console.log(convertLetter("?"));
-// console.log(rot13("SERR PBQR PNZC"));
+console.log(rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT."));
